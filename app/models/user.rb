@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :notes
 
   before_save :ensure_authentication_token
-  after_create :send_welcome_email
+  # after_create :send_welcome_email
 
   def name
     [first_name, last_name].join(" ")
